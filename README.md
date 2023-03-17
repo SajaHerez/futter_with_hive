@@ -20,12 +20,12 @@ Before you start
 Consider using Isar, a Flutter database by the author of Hive that is superior in every way!
 
 Features
-🚀 Cross platform: mobile, desktop, browser
-⚡ Great performance (see benchmark)
-❤️ Simple, powerful, & intuitive API
-🔒 Strong encryption built in
-🎈 NO native dependencies
-🔋 Batteries included
+- 🚀 Cross platform: mobile, desktop, browser
+- ⚡ Great performance (see benchmark)
+- ❤️ Simple, powerful, & intuitive API
+- 🔒 Strong encryption built in
+- 🎈 NO native dependencies
+= 🔋 Batteries included
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)

@@ -15,9 +15,12 @@ class HiveServices {
 
   getInfo() {
     // Get info from people box
-    String name = box.get('name');
-    String country = box.get('country');
-    print('my name is $name , My home is $country');
+    String country = "";
+    if (box.containsKey("name") && box.containsKey("country")) {
+      String name = box.get('name');
+      country = box.get('country');
+      print('my name is $name , My home is $country');
+    }
 
     //If you are using auto-incrementing values, you can read using the index,like this:
     String sis = box.getAt(0); // retrieves the value with index 0
@@ -42,9 +45,9 @@ class HiveServices {
     box.delete('country');
     print('Info deleted from box!');
 
-    // If you are using auto-incrementing values, 
+    // If you are using auto-incrementing values,
     //you can use deleteAt() method by providing the index.
-    
+
     box.deleteAt(0);
   }
 }

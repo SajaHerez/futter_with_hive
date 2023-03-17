@@ -37,22 +37,22 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
-              onPressed:hiveSer.addInfo,
+              onPressed: hiveSer.addInfo,
               child: const Text('Add'),
             ),
             ElevatedButton(
-              onPressed:hiveSer.getInfo,
+              onPressed: hiveSer.getInfo,
               child: const Text('Get'),
             ),
             ElevatedButton(
-              onPressed:hiveSer.updateInfo,
+              onPressed: hiveSer.updateInfo,
               child: const Text('Update'),
             ),
             ElevatedButton(
-              onPressed:hiveSer.deleteInfo,
+              onPressed: hiveSer.deleteInfo,
               child: const Text('Delete'),
             ),
           ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:futter_with_hive/person.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'info_screen.dart';
 import 'my_app_page.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  InfoScreen(),
     );
   }
 }

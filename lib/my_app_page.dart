@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
+import 'hive_services.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -12,12 +14,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late final Box box;
-
+  late HiveServices hiveSer;
   @override
   void initState() {
     super.initState();
     // Get reference to an already opened box
     box = Hive.box('peopleBox');
+    hiveSer = HiveServices(box);
   }
 
   @override
@@ -33,15 +36,24 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+          children: [
+            ElevatedButton(
+              onPressed:hiveSer.addInfo,
+              child: const Text('Add'),
             ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headline4,
+            ElevatedButton(
+              onPressed:hiveSer.getInfo,
+              child: const Text('Get'),
+            ),
+            ElevatedButton(
+              onPressed:hiveSer.updateInfo,
+              child: const Text('Update'),
+            ),
+            ElevatedButton(
+              onPressed:hiveSer.deleteInfo,
+              child: const Text('Delete'),
             ),
           ],
         ),
